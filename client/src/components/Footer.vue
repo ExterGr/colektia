@@ -1,6 +1,7 @@
 <template>
   <footer>
-    <h3>Footer</h3>
+    <h3>Visit us: <a href="https://www.colektia.com" target="_blank" rel="norefereer noopener">colektia</a> &copy Ivan Kudacki</h3>
+    
   </footer>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>HOME</h1>
+    <h1>Custom your gallery</h1>
     <Form :method="refresh" />
     <Cards :images="images" :method="refresh" v-show="showCards" />
   </div>

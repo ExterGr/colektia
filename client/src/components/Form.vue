@@ -84,11 +84,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .form_container {
   width: 80%;
   height: 350px;
   margin: auto;
   justify-content: center;
+}
+textarea{
+  resize: none;
 }
 </style>
