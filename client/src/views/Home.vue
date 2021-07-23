@@ -1,8 +1,8 @@
 <template>
   <div>
     <h1>HOME</h1>
-    <Form />
-    <Cards :images="images" />
+    <Form :method="refresh" />
+    <Cards :images="images" :method="refresh" v-show="showCards" />
   </div>
 </template>
 <script>
@@ -19,12 +19,24 @@ export default {
   data() {
     return {
       images: [],
+      showCards: true,
     };
   },
   async created() {
     const data = await axios.get("http://localhost:3000/api/images/all");
 
     this.images = data.data;
+    if (!this.images) this.showCards = false;
+    else this.showCards = true;
+  },
+  methods: {
+    async refresh() {
+      const data = await axios.get("http://localhost:3000/api/images/all");
+
+      this.images = data.data;
+      if (!this.images) this.showCards = false;
+      else this.showCards = true;
+    },
   },
 };
 </script>

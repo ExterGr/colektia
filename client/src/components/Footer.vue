@@ -15,7 +15,8 @@ template {
   padding-bottom: 2.5rem;
 }
 footer {
-  bottom: 0;
+  bottom: -100px;
+  position: absolute;
   width: 100%;
   height: 2.5rem;
   background-color: #fa5e62;

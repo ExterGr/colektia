@@ -1,7 +1,7 @@
 <template>
   <div class="container_cards">
     <div :key="image.id" v-for="image in images">
-      <Card :image="image" />
+      <Card :image="image" :method="method"/>
     </div>
   </div>
 </template>
@@ -16,7 +16,13 @@ export default {
   },
   props: {
     images: Array,
+    method:{
+      type: Function
+    }
   },
+  mounted(){
+    this.method;
+  }
 };
 </script>
 
